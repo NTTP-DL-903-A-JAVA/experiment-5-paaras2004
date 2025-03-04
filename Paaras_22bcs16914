@@ -44,9 +44,7 @@ FileOutputStream(FILE_NAME))) {
         } 
     } 
  
-    // Method to deserialize a Student object     
-    public static Student deserializeStudent() {         
-       try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) { 
+    // Method to deserialize a Student object     public static Student deserializeStudent() {         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) { 
             return (Student) ois.readObject();         } catch (FileNotFoundException e) { 
             System.out.println("Error: File not found! Cannot deserialize."); 
         } catch (IOException e) { 
@@ -56,3 +54,4 @@ FileOutputStream(FILE_NAME))) {
         } 
         return null; 
     } 
+
